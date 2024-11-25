@@ -2,7 +2,9 @@ import streamlit as st
 import os
 from openai import OpenAI
 os.environ["OPENAI_API_KEY"] = "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"
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"),)
+client = OpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY"),
+)
 
 # 앱 제목
 st.title("오늘의 술을 추천해드릴게요😊😃 !")
@@ -39,4 +41,3 @@ if st.button("술 추천받기"):
     
     st.write(result)
     st.image(image_url)
-    
